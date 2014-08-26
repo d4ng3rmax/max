@@ -14,42 +14,48 @@ da imagem do sistema operacional. Para tanto, instale o vagrant
 
 Feito isto, execute o comando abaixo para efetuar o download da imagem:
 
-```bash
-"sudo vagrant box add ubuntu/trusty64"
+```ruby
+sudo vagrant box add ubuntu/trusty64
 ```
 
 
-
-	2. EXECUCAO DO SCRIPT
+**2. EXECUCAO DO SCRIPT**
 
 No diretório em que os pacote foi extraído (mesmo diretório em que este
 arquivo README se encontra) execute o comando:
 
+```ruby
 sudo vagrant up
+```
 
 O sistema irá gerar uma máquina virtual no VirtualBox e realizar download
 de todos os pacotes e suas configurações.
 
 
-
-
-	3. APOS A EXECUCAO DO SCRIPT
+**3. APOS A EXECUCAO DO SCRIPT**
 
 Quando concluida a execução do script, acesse o servidor recém instalado
 através do comando:
 
+```ruby
 vagrant ssh
+```
 
 Este comando também deve ser executado no mesmo diretório.
 O próximo passo é realizar a configuração da base de dados para o Kamailio.
 Para isto, execute o comando:
 
+```ruby
 sudo /usr/local/sbin/kamdbctl create
+```
 
-Responda todas as opções como Y.
+_Responda todas as opções como Y.
+
 Inicie o serviço do kamailio:
 
+```ruby
 sudo service kamailio start
+```
 
 Crie um domínio para ser utilizado no kamailio:
 kamctl domain add <nome do dominio>

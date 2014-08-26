@@ -14,7 +14,7 @@ da imagem do sistema operacional. Para tanto, instale o vagrant
 
 Feito isto, execute o comando abaixo para efetuar o download da imagem:
 
-```ruby
+```shell
 sudo vagrant box add ubuntu/trusty64
 ```
 
@@ -24,8 +24,8 @@ sudo vagrant box add ubuntu/trusty64
 No diretório em que os pacote foi extraído (mesmo diretório em que este
 arquivo README se encontra) execute o comando:
 
-```ruby
-sudo vagrant up
+```bash
+$sudo vagrant up
 ```
 
 O sistema irá gerar uma máquina virtual no VirtualBox e realizar download
@@ -49,9 +49,9 @@ Para isto, execute o comando:
 sudo /usr/local/sbin/kamdbctl create
 ```
 
-_Responda todas as opções como Y.
+####Responda todas as opções como Y.:heavy_exclamation_mark:
 
-Inicie o serviço do kamailio:
+*Inicie o serviço do kamailio:*
 
 ```ruby
 sudo service kamailio start

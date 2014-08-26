@@ -24,7 +24,7 @@ $sudo vagrant box add ubuntu/trusty64
 No diretório em que os pacote foi extraído (mesmo diretório em que este
 arquivo README se encontra) execute o comando:
 
-```bash
+```sh
 $sudo vagrant up
 ```
 
@@ -37,7 +37,7 @@ de todos os pacotes e suas configurações.
 Quando concluida a execução do script, acesse o servidor recém instalado
 através do comando:
 
-```bash
+```sh
 vagrant ssh
 ```
 
@@ -49,7 +49,7 @@ Para isto, execute o comando:
 $sudo /usr/local/sbin/kamdbctl create
 ```
 
-:heavy_exclamation_mark: ######Responda todas as opções como Y.
+:heavy_exclamation_mark: Responda todas as opções como **Y**.
 
 *Inicie o serviço do kamailio:*
 

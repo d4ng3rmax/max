@@ -15,7 +15,7 @@ da imagem do sistema operacional. Para tanto, instale o vagrant
 Feito isto, execute o comando abaixo para efetuar o download da imagem:
 
 ```bash
-sudo vagrant box add ubuntu/trusty64
+`sudo vagrant box add ubuntu/trusty64`
 ```
 
 

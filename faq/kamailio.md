@@ -14,7 +14,7 @@ da imagem do sistema operacional. Para tanto, instale o vagrant
 
 Feito isto, execute o comando abaixo para efetuar o download da imagem:
 
-```bash
+```sh
 $sudo vagrant box add ubuntu/trusty64
 ```
 
@@ -24,7 +24,7 @@ $sudo vagrant box add ubuntu/trusty64
 No diretório em que os pacote foi extraído (mesmo diretório em que este
 arquivo README se encontra) execute o comando:
 
-```sh
+```arduino
 $sudo vagrant up
 ```
 
@@ -37,7 +37,7 @@ de todos os pacotes e suas configurações.
 Quando concluida a execução do script, acesse o servidor recém instalado
 através do comando:
 
-```sh
+```assembly
 vagrant ssh
 ```
 
@@ -45,7 +45,7 @@ Este comando também deve ser executado no mesmo diretório.
 O próximo passo é realizar a configuração da base de dados para o Kamailio.
 Para isto, execute o comando:
 
-```bash
+```boo
 $sudo /usr/local/sbin/kamdbctl create
 ```
 
@@ -53,7 +53,7 @@ $sudo /usr/local/sbin/kamdbctl create
 
 *Inicie o serviço do kamailio:*
 
-```bash
+```c++
 $sudo service kamailio start
 ```
 
@@ -75,7 +75,10 @@ o endereço IP do servidor (eth1) na porta 9292.
 
 Ao reiniciar o servidor o rackup não estará em execução. Para iniciar este 
 serviço acesse o diretório /op/rackup:
+
+```css
 cd /opt/rackup
+```
 
 E execute o comando:
 rackup config.ru &

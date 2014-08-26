@@ -9,4 +9,8 @@ MAX h1
 MAX Code
 ```
 
+```bash
+MAX Bash
+```
+
 ![screenshot](http://i.imgur.com/3C1Ze.png)

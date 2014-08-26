@@ -1,10 +1,9 @@
-##SCRIPT PARA INSTALAÇÃO DO KAMAILIO
+##Script Para Instalação Do Kamailio
 
 
 Este script inicia uma máquina virtual com sistema operacional ubuntu/trusty6
 e instala o Kamailio e as ferramentas do RackUP. Adicionalmente, todas as 
 configurações para suporte a WebSockets são realizadas no ambiente.
-
 
 
 **1. ANTES DE EXECUTAR**
@@ -15,7 +14,9 @@ da imagem do sistema operacional. Para tanto, instale o vagrant
 
 Feito isto, execute o comando abaixo para efetuar o download da imagem:
 
+```bash
 sudo vagrant box add ubuntu/trusty64
+```
 
 
 

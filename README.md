@@ -8,3 +8,5 @@ MAX h1
 ```
 MAX TIPs
 ```
+
+![MAX HR]

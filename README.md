@@ -6,7 +6,7 @@ MAX h1
 **MAX h3**
 
 ```
-MAX TIPs
+MAX Code
 ```
 
-![MAX HR]
+![screenshot](http://i.imgur.com/3C1Ze.png)

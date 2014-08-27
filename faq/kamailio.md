@@ -28,8 +28,8 @@ arquivo README se encontra) execute o comando:
 $sudo vagrant up
 ```
 
-O sistema irá gerar uma máquina virtual no VirtualBox e realizar download
-de todos os pacotes e suas configurações.
+*O sistema irá gerar uma máquina virtual no VirtualBox e realizar download
+de todos os pacotes e suas configurações.*
 
 
 **3. APOS A EXECUCAO DO SCRIPT**
@@ -42,6 +42,7 @@ $vagrant ssh
 ```
 
 Este comando também deve ser executado no mesmo diretório.
+
 O próximo passo é realizar a configuração da base de dados para o Kamailio.
 Para isto, execute o comando:
 
@@ -49,7 +50,7 @@ Para isto, execute o comando:
 $sudo /usr/local/sbin/kamdbctl create
 ```
 
-:heavy_exclamation_mark: Responda todas as opções como **Y**.
+*Responda todas as opções como* **Y**.
 
 *Inicie o serviço do kamailio:*
 
@@ -58,14 +59,22 @@ $sudo service kamailio start
 ```
 
 Crie um domínio para ser utilizado no kamailio:
-kamctl domain add <nome do dominio>
+
+```boo
+$kamctl domain add <nome do dominio>
+```
 
 Crie usuários no kamailio:
-kamctl add <user>@<dominio> <senha>
+
+```boo
+$kamctl add <user>@<dominio> <senha>
+```
 
 Execute o reload na lista de dominios do kamailio:
-kamctl domain reload
 
+```boo
+$kamctl domain reload
+```
 
 **4. RACKUP**
 
@@ -74,7 +83,7 @@ temos disponível. Para acessar esta interface, acessa através de seu browser
 o endereço IP do servidor (eth1) na porta 9292.
 
 Ao reiniciar o servidor o rackup não estará em execução. Para iniciar este 
-serviço acesse o diretório /op/rackup:
+serviço acesse o diretório **/op/rackup**:
 
 ```boo
 $cd /opt/rackup

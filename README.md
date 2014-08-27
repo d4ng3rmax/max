@@ -9,8 +9,8 @@ MAX h1
 MAX Code
 ```
 
-```bash
-MAX Bash
+```Boo
+$MAX Bash
 ```
 
 ![screenshot](http://i.imgur.com/rFYWZTD.png)

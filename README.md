@@ -13,4 +13,4 @@ MAX Code
 MAX Bash
 ```
 
-![screenshot](http://i.imgur.com/3C1Ze.png)
+![screenshot](http://i.imgur.com/rFYWZTD.png)

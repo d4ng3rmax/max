@@ -10,7 +10,7 @@ MAX Code
 ```
 
 ```Boo
-$MAX Bash
+$ MAX Bash (Boo)
 ```
 
 ![screenshot](http://i.imgur.com/rFYWZTD.png)

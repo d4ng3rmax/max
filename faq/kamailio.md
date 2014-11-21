@@ -38,7 +38,7 @@ Quando concluida a execução do script, acesse o servidor recém instalado
 através do comando:
 
 ```boo
-$vagrant ssh
+$sudo vagrant ssh
 ```
 
 Este comando também deve ser executado no mesmo diretório.

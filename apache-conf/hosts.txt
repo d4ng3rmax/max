@@ -1,23 +1,35 @@
-# Copyright (c) 1993-2009 Microsoft Corp.
+##
+# Host Database
 #
-# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
-#
-# This file contains the mappings of IP addresses to host names. Each
-# entry should be kept on an individual line. The IP address should
-# be placed in the first column followed by the corresponding host name.
-# The IP address and the host name should be separated by at least one
-# space.
-#
-# Additionally, comments (such as these) may be inserted on individual
-# lines or following the machine name denoted by a '#' symbol.
-#
-# For example:
-#
-#      102.54.94.97     rhino.acme.com          # source server
-#       38.25.63.10     x.acme.com              # x client host
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost dev.omnize dev.free maxs-mac-mini
+127.0.1.1	localhost maxs-mac-mini
+255.255.255.255	broadcasthost
+::1             localhost 
+fe80::1%lo0	localhost
 
-# localhost name resolution is handled within DNS itself.
-	127.0.0.1       dev.siteapps.com dev.btbuckets.com devnet.btbuckets.com branch.siteapps.com
-#	::1             localhost
-10.0.200.26		www.pclicks.com static.pclicks.com
-10.0.1.29 		webserverlan
+127.0.0.1	activate.adobe.com
+127.0.0.1	practivate.adobe.com
+127.0.0.1	ereg.adobe.com
+127.0.0.1	wip3.adobe.com
+127.0.0.1	activate.wip3.adobe.com
+127.0.0.1	3dns-3.adobe.com
+127.0.0.1	3dns-2.adobe.com
+127.0.0.1	adobe-dns.adobe.com
+127.0.0.1	adobe-dns-2.adobe.com
+127.0.0.1	adobe-dns-3.adobe.com
+127.0.0.1	ereg.wip3.adobe.com
+127.0.0.1	activate-sea.adobe.com
+127.0.0.1	wwis-dubc1-vip60.adobe.com
+127.0.0.1	activate-sjc0.adobe.com
+127.0.0.1	hl2rcv.adobe.com
+127.0.0.1	lm.licenses.adobe.com
+127.0.0.1	na2m-pr.licenses.adobe.com
+
+127.0.0.1	ims-na1-prprod.adobelogin.com
+
+127.0.0.1	na4r.services.adobe.com
+
+127.0.0.1	na1r.services.adobe.com

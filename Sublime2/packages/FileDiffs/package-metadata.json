@@ -1,0 +1,1 @@
+{"description": "Shows diffs between the current file, or selection(s) in the current file, and clipboard, another file, or unsaved changes.  With contributions from Sebastian Pape (spape) and Jiri Urban (jiriurban)", "url": "https://github.com/colinta/SublimeFileDiffs", "platforms": ["*"], "version": "2.4.2", "sublime_text": "*", "dependencies": []}

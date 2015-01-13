@@ -1,0 +1,44 @@
+#!/bin/bash
+
+path=~/work/glassfish4/glassfish/domains/domain1/applications/omz-adm-ear/omz-adm-web-1.0-SNAPSHOT_war
+
+echo PATH = $path
+echo " "
+echo -n "Is this the right path? [y/n] "
+
+read var
+if [ $var = "y" ]; then
+	echo "Transfering file 01..."
+	# cp -rf $path/site .
+	rsync -av --info=progress2 $path/site .
+
+	echo "Transfering file 02..."
+	# cp -rf $path/public .
+	rsync -av --info=progress2 $path/public .
+	
+	echo "END :)"
+elif [ $var = "n" ]; then
+	echo "Exiting..."
+	exit
+fi
+
+# echo -ne '[#####                                             ] (10%)\r'
+# sleep 1
+# echo -ne '[##########                                        ] (20%)\r'
+# sleep 1
+# echo -ne '[###############                                   ] (30%)\r'
+# sleep 1
+# echo -ne '[####################                              ] (40%)\r'
+# sleep 1
+# echo -ne '[#########################                         ] (50%)\r'
+# sleep 1
+# echo -ne '[##############################                    ] (60%)\r'
+# sleep 1
+# echo -ne '[###################################               ] (70%)\r'
+# sleep 1
+# echo -ne '[########################################          ] (80%)\r'
+# sleep 1
+# echo -ne '[#############################################     ] (90%)\r'
+# sleep 1
+# echo -ne '[##################################################] (100%)\r'
+# echo -ne '\n'

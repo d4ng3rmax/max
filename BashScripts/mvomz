@@ -10,11 +10,11 @@ read var
 if [ $var = "y" ]; then
 	echo "Transfering file 01..."
 	# cp -rf $path/site .
-	rsync -av --info=progress2 $path/site .
+	rsync -avP $path/site .
 
 	echo "Transfering file 02..."
 	# cp -rf $path/public .
-	rsync -av --info=progress2 $path/public .
+	rsync -avP $path/public .
 	
 	echo "END :)"
 elif [ $var = "n" ]; then

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Altera as variaveis de sistema
+# Autor: Gabriel Silveira
+
+#for i in *; do mv "$i" "`echo $i | sed -e 's,â,a,g' | sed -e 's,á,a,g' | sed -e 's,ã,a,g' | sed -e 's,à,a,g' | sed -e 's,ç,c,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,ê,e,g' | sed -e 's,é,e,g' | sed -e 's,è,e,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,î,i,g' | sed -e 's,í,i,g' | sed -e 's,ì,i,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,ô,o,g' | sed -e 's,ó,o,g' | sed -e 's,ò,o,g' | sed -e 's,õ,o,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,û,u,g' | sed -e 's,ú,u,g' | sed -e 's,ù,u,g'`"; done
+#
+#for i in *; do mv "$i" "`echo $i | sed -e 's,Â,A,g' | sed -e 's,Á,A,g' | sed -e 's,Ã,A,g' | sed -e 's,À,A,g' | sed -e 's,Ç,C,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,Ê,E,g' | sed -e 's,É,E,g' | sed -e 's,È,E,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,Î,I,g' | sed -e 's,Í,I,g' | sed -e 's,Ì,I,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,Ô,O,g' | sed -e 's,Ó,O,g' | sed -e 's,Ò,O,g' | sed -e 's,Õ,O,g'`"; done
+#for i in *; do mv "$i" "`echo $i | sed -e 's,Û,U,g' | sed -e 's,Ú,U,g' | sed -e 's,Ù,U,g'`"; done
+
+find . | while read file; do
+  oldfile=$(basename "$file")
+  newfile=$(echo "$oldfile" | sed "s/â/a/g;s/á/a/g;s/ã/a/g;s/à/a/g;s/ç/c/g;s/ê/e/g;s/é/e/g;s/è/e/g;s/î/i/g;s/í/i/g;s/ì/i/g;s/ô/o/g;s/ó/o/g;s/ò/o/g;s/õ/o/g;s/û/u/g;s/ú/u/g;s/ù/u/g;s/Â/A/g;s/Á/A/g;s/Ã/A/g;s/À/A/g;s/Ç/C/g;s/Ê/E/g;s/É/E/g;s/È/E/g;s/Î/I/g;s/Í/I/g;s/Ì/I/g;s/Ô/O/g;s/Ó/O/g;s/Ò/O/g;s/Õ/O/g;s/Û/U/g;s/Ú/U/g;s/Ù/U/g;s/ä/a/g;s/Ä/A/g;s/ë/e/g;s/Ë/E/g;s/ï/i/g;s/Ï/I/g;s/ö/o/g;s/Ö/O/g;s/ü/u/g;s/Ü/U/g;s/ÿ/y/g")
+  #newfile=$(echo "$oldfile" | sed "s/[âáãà]/a/g;s/[ÂÁÃÀ]/A/g;s/[êéè]/e/g;s/[ÊÉÈ]/E/g;s/[îíì]/i/g;s/[ÎÍÌ]/I/g;s/[ôóòõ]/o/g;s/[ÔÓÒÕ]/O/g;s/[ûúù]/u/g;s/[ÛÚÙ]/U/g;s/ç/c/g;s/Ç/C/g")
+  if [ ! "$newfile" == "$oldfile" ]; then
+    echo "$file" "${file%$oldfile}$newfile"
+    mv "$file" "${file%$oldfile}$newfile"
+  fi
+done

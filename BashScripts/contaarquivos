@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#for f in *
+#do
+#  if [ -d "$f" ]
+#  then
+#      cd "$f"
+#      new=`find . -type d -depth 1 | wc -l`
+#      if test $new -gt 0
+#      then
+#        cd "$f"
+#      else
+#        c=`ls -l *.mp3 2>/dev/null | wc -l`
+#        if test $c -gt 0
+#        then
+#            echo "$f $c"
+#        fi
+#        cd ..
+#      fi
+#  fi
+#done
+
+#for f in *; do [ -d ./"$f" ] && find ./"$f" -maxdepth 1 -exec echo \; | wc -l && echo $f; done
+
+#find . -type d -depth 1 | while read DIR
+#do
+#    MP3=$(find $DIR -type f -name '*.mp3' | wc -l)
+#    echo "$DIR : $MP3"
+#done
+
+IFS=$'\n'
+
+find . -type d -depth 1 | while read DIR
+do
+    MP3=$(find $DIR -type f -name '*.mp3' | wc -l)
+    echo "$DIR : $MP3"
+done

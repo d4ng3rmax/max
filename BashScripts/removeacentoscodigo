@@ -1,0 +1,9 @@
+#!/bin/bash
+
+perl -pi -w -e 's/%C3%A2/a/g;s/%C3%A1/a/g;s/%C3%A3/a/g;s/%C3%A0/a/g;s/%C3%A7/c/g;s/%C3%AA/e/g;s/%C3%A9/e/g;s/%C3%A8/e/g;s/%C3%AE/i/g;s/%C3%AD/i/g;s/%C3%AC/i/g;s/%C3%B4/o/g;s/%C3%B3/o/g;s/%C3%B2/o/g;s/%C3%B5/o/g;s/%C3%BB/u/g;s/%C3%BA/u/g;s/%C3%B9/u/g;s/%C3%82/A/g;s/%C3%81/A/g;s/%C3%83/A/g;s/%C3%80/A/g;s/%C3%87/C/g;s/%C3%8A/E/g;s/%C3%89/E/g;s/%C3%88/E/g;s/%C3%8E/I/g;s/%C3%8D/I/g;s/%C3%8C/I/g;s/%C3%94/O/g;s/%C3%93/O/g;s/%C3%92/O/g;s/%C3%95/O/g;s/%C3%9B/U/g;s/%C3%9A/U/g;s/%C3%9B/U/g;s/%C3%A4/a/g;s/%C3%84/A/g;s/%C3%AB/e/g;s/%C3%8B/E/g;s/%C3%AF/i/g;s/%C3%8F/I/g;s/%C3%B6/o/g;s/%C3%96/O/g;s/%C3%BB/u/g;s/%C3%9C/U/g;s/%C3%BF/y/g;' $1
+
+read $1
+test "$1" = "" && echo "Expecifique um arquivo"; exit
+
+
+perl -pi -w -e 's/á/é/g;s/í/ó/g;s/%C3%93/O/g;' $(find . -type f | grep .txt)

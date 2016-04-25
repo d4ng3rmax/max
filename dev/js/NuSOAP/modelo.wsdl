@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="urn:hellowsdl3"
+             xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+             targetNamespace="urn:hellowsdl3"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+	<types>
+		<xsd:schema elementFormDefault="qualified" targetNamespace="urn:hellowsdl3">
+			<xsd:element name="hello">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="1" maxOccurs="1" name="name" type="tns:Person" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:complexType name="Person">
+				<xsd:sequence>
+					<xsd:element minOccurs="1" maxOccurs="1" name="firstname" type="xsd:string" />
+					<xsd:element minOccurs="1" maxOccurs="1" name="age" type="xsd:int" />
+					<xsd:element minOccurs="1" maxOccurs="1" name="gender" type="xsd:string" />
+					<xsd:any minOccurs="0" maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="HelloResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="1" maxOccurs="1" name="return" type="tns:SweepstakesGreeting" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:complexType name="SweepstakesGreeting">
+				<xsd:sequence>
+					<xsd:element minOccurs="1" maxOccurs="1" name="greeting" type="xsd:string" />
+					<xsd:element minOccurs="1" maxOccurs="1" name="winner" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+
+	<message name="msgEntrada">
+		<part name="value" type="xs:string" />
+	</message>
+	<message name="msgSaida">
+		<part name="value" type="xs:string"/>
+	</message>
+
+	<portType name="myMsgs">
+		<operation name="msg">
+			<input message="msgEntrada" />
+			<output message="msgSaida" />
+		</operation>
+	</portType>
+
+	<binding name="hellowsdl3Binding" type="tns:hellowsdl3PortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+		<operation name="hello">
+			<soap:operation soapAction="urn:hellowsdl3#hello" style="document" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<service name="hellowsdl3">
+		<port name="hellowsdl3Port" binding="tns:hellowsdl3Binding">
+			<soap:address location="http://www.scottnichol.com/samples/hellowsdl3.php" />
+		</port>
+	</service>
+</definitions>

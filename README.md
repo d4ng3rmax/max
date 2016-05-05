@@ -16,8 +16,8 @@ line (two spaces)
   
 :rocket:
   
-> Bloquote
-> Bloquote
+> Bloquote  
+Bloquote
   
 
 `single code`

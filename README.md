@@ -2,9 +2,26 @@ MAX h1
 ===
 
 ## MAX h2
+### MAX h3 ##
+**MAX bold**
+_MAX Italic__
 
-**MAX h3**
+Breaking (two spaces)  
+the (two spaces)  
+line (two spaces)  
 
+* Items
+* Items
+* Items
+  
+:rocket:
+  
+> Bloquote
+> Bloquote
+  
+
+`single code`
+  
 ```
 MAX Code
 ```

@@ -18,6 +18,8 @@ line (two spaces)
   
 > Bloquote  
 Bloquote
+
+[Link for GitHub](http://github.com)
   
 
 `single code`

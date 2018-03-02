@@ -4,7 +4,7 @@ MAX h1
 ===
 
 ## MAX h2
-### MAX h3 ##
+### MAX h3
 **MAX bold**  
 _MAX Italic_
 

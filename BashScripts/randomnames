@@ -11,13 +11,17 @@
 # echo $SUBSTRING
 
 find *.mp3 | while read file; do
-  oldfile=$(basename "$file")
-  cleanfile=$(echo "$oldfile" | sed "s/[ ]//g;s/'//g")
+
+  oldfile=$(basename "$file") #get the original file
+  cleanfile=$(echo "$oldfile" | sed "s/[ ]//g;s/'//g") #clean spaces and accents on filename
+	cleanfile=$(echo $cleanfile | cut -d'|' -f 2) #substr for '|' and get the index #2
+
+	actualdate=$(date +"%T") #get actual time
   
-  md5=$(echo "$oldfile" | md5)
-  md5=${md5:0:5}
+  md5=$(echo "$oldfile $actualdate" | md5) #md5 filename
+  md5=${md5:0:5} #substr and get 5 first characters
   
-  newfile="$(echo "$md5""$cleanfile")"
+  newfile="$(echo "$md5""|""$cleanfile")" #concatenate filename
 
   echo "$newfile";
   mv "$oldfile" "$newfile"

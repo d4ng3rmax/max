@@ -19,7 +19,7 @@ find *.mp3 | while read file; do
 	actualdate=$(date +"%T") #get actual time
   
   md5=$(echo "$actualdate $oldfile" | md5) #md5 filename
-  md5=${md5:0:7} #substr and get 5 first characters
+  md5=${md5:1:4} #substr and get 4 first characters
   
   newfile="$(echo "$md5""|""$cleanfile")" #concatenate filename
 

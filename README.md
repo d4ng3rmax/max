@@ -29,11 +29,13 @@ Bloquote
 VSCODE COMMENT COLORING
 ===
 
+```
 ! example
 ? example
 // example
 todo example
 * example
+```
 
 ```
 "better-comments.tags": [

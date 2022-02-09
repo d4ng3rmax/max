@@ -29,7 +29,7 @@ Bloquote
 VSCODE COMMENT COLORING
 ===
 
-```
+```js
 ! example
 ? example
 // example

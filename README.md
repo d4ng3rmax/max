@@ -30,11 +30,13 @@ VSCODE COMMENT COLORING
 ===
 
 ```js
+/*
 ! example
 ? example
 // example
 todo example
 * example
+*/
 ```
 
 ```
